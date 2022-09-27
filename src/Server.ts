@@ -64,7 +64,8 @@ export default class Server {
                 }
 
                 if (this.#database.find(id)) {
-                    res.status(401).send({error: 'ID already exists, retry with another ID.'})
+                    res.status(401).send({error: 'ID already exists, retry with another ID.'});
+                    return;
                 }
             }
 
